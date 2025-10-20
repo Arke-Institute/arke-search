@@ -1,0 +1,21 @@
+{
+  "name": "arke-search",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-19",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "routes": [
+    {
+      "pattern": "search.arke.institute",
+      "custom_domain": true
+    }
+  ],
+
+  "vars": {
+    "PINECONE_INDEX_NAME": "arke-institute-prod"
+  }
+
+  // Secrets (set via: wrangler secret put <NAME>)
+  // - PINECONE_API_KEY
+  // - OPENAI_API_KEY
+}

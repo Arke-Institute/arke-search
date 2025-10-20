@@ -1,0 +1,19 @@
+{
+  "name": "arke-search",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker API for querying Pinecone and retrieving Arke entities",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^4.0.0",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.43.0"
+  }
+}
