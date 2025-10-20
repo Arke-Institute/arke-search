@@ -24,12 +24,41 @@ Arke IPFS API (manifest + metadata fetching in parallel)
 Combined Results (sorted by similarity score)
 ```
 
-## API Endpoint
+## API Endpoints
 
 **Production**: `https://search.arke.institute`
 **Local Dev**: `http://localhost:8787`
 
-## Request Format
+### 1. List Namespaces
+
+**`GET /namespaces`**
+
+Returns all available namespaces with descriptions.
+
+```bash
+curl https://search.arke.institute/namespaces
+```
+
+**Response:**
+```json
+{
+  "namespaces": ["digitalObject", "institution", "series", "fileUnit", "collection"],
+  "count": 5,
+  "description": {
+    "institution": "Institutional collections",
+    "collection": "Record collections",
+    "series": "Record series",
+    "fileUnit": "File units",
+    "digitalObject": "Digital objects (scanned documents, images, etc.)"
+  }
+}
+```
+
+### 2. Search
+
+**`POST /`**
+
+Perform semantic search across entities.
 
 ```bash
 POST /
